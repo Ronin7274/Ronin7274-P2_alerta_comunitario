@@ -1,0 +1,161 @@
+/* Estilos da página inicial; regras base mobile-first. */
+:root {
+  --mare-900: #0b2533;
+  --mare-700: #14566e;
+  --agua-300: #8cc7d9;
+  --agua-100: #e3f1f6;
+  --sinal: #f2a900;
+  --papel: #f4f7f8;
+  --texto: #14232c;
+  --fonte-titulo: Rockwell, "Roboto Slab", Georgia, serif;
+}
+
+body {
+  background: var(--papel);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--sinal);
+  outline-offset: 2px;
+}
+
+.texto-corrido {
+  max-width: 65ch;
+}
+
+.barra {
+  background: var(--mare-900);
+}
+
+.barra .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+}
+
+.barra .nav-link {
+  color: var(--agua-300);
+}
+
+.barra .nav-link:hover,
+.barra .nav-link.active {
+  color: #fff;
+}
+
+.abertura {
+  background: var(--mare-900);
+  color: #fff;
+  padding: 2.5rem 0 3rem;
+}
+
+.abertura__grade {
+  display: grid;
+  gap: 2rem;
+}
+
+.abertura h1 {
+  font-size: 2rem;
+}
+
+.abertura p {
+  color: var(--agua-100);
+}
+
+.regua {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 6px solid var(--agua-300);
+  border-radius: 0 0.5rem 0.5rem 0;
+  overflow: hidden;
+}
+
+.regua__nivel {
+  padding: 1rem 1.25rem;
+  color: var(--texto);
+}
+
+.regua__nivel strong {
+  display: block;
+  font-family: var(--fonte-titulo);
+}
+
+.regua__nivel--alta { background: #f3b0aa; }
+.regua__nivel--media { background: #f8d77a; }
+.regua__nivel--baixa { background: var(--agua-300); }
+
+.secao {
+  padding: 2.5rem 0;
+}
+
+.secao--clara {
+  background: #fff;
+}
+
+.secao h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Grade de passos/ODS (Grid): 1 coluna no celular */
+.grade-cartoes {
+  display: grid;
+  gap: 1rem;
+}
+
+.ods {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ods li {
+  border-left: 6px solid var(--mare-700);
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.rodape {
+  background: var(--mare-900);
+  color: var(--agua-100);
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.rodape__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .abertura h1 { font-size: 2.6rem; }
+
+  .abertura__grade {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+  }
+
+  .grade-cartoes { grid-template-columns: repeat(3, 1fr); }
+  .ods { grid-template-columns: repeat(3, 1fr); }
+
+  .rodape__conteudo {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .abertura { padding: 4rem 0 5rem; }
+  .abertura h1 { font-size: 3.2rem; }
+}
