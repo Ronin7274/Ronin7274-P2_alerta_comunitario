@@ -1,0 +1,101 @@
+:root {
+  --mare-900: #0b2533;
+  --mare-700: #14566e;
+  --agua-300: #8cc7d9;
+  --agua-100: #e3f1f6;
+  --sinal: #f2a900;
+  --papel: #f4f7f8;
+  --texto: #14232c;
+  --fonte-titulo: Rockwell, "Roboto Slab", Georgia, serif;
+}
+
+body {
+  background: var(--papel);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, .navbar-brand {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--sinal);
+  outline-offset: 2px;
+}
+
+.texto-corrido {
+  max-width: 65ch;
+}
+
+.barra {
+  background: var(--mare-900);
+}
+
+.barra .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+}
+
+.barra .nav-link {
+  color: var(--agua-300);
+}
+
+.barra .nav-link:hover,
+.barra .nav-link.active {
+  color: #fff;
+}
+
+.secao {
+  padding: 2.5rem 0;
+}
+
+.secao--clara {
+  background: #fff;
+}
+
+.secao h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.ods {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ods li {
+  border-left: 6px solid var(--mare-700);
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.rodape {
+  background: var(--mare-900);
+  color: var(--agua-100);
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.rodape__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .ods {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rodape__conteudo {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
