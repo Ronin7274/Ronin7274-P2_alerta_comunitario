@@ -11,7 +11,8 @@
     'enchente': 'Enchente',
     'deslizamento': 'Deslizamento',
     'incendio': 'Incêndio',
-    'onda-de-calor': 'Onda de calor'
+    'onda-de-calor': 'Onda de calor',
+    'obstrucao': 'Obstrução'
   });
 
   const GRAVIDADES = Object.freeze({

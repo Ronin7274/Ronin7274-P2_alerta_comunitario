@@ -17,7 +17,7 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, .navbar-brand {
+h1, h2, h3, .navbar-brand {
   font-family: var(--fonte-titulo);
   line-height: 1.2;
 }
@@ -85,7 +85,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
   gap: 0.5rem;
 }
 
-.ocorrencias {
+.relatos {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -93,35 +93,35 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
   gap: 1rem;
 }
 
-.ocorrencia {
+.relato {
   border: 1px solid #d3dde2;
   border-radius: 0.5rem;
   padding: 1rem;
   background: #fff;
 }
 
-.ocorrencia__titulo {
+.relato__titulo {
   font-size: 1.1rem;
   margin: 0.5rem 0 0.25rem;
 }
 
-.ocorrencia__texto {
+.relato__texto {
   margin-bottom: 0.5rem;
   overflow-wrap: anywhere;
 }
 
-.ocorrencia__data {
+.relato__data {
   font-size: 0.85rem;
   color: #52626b;
   margin-bottom: 0.75rem;
 }
 
-.ocorrencia__acoes {
+.relato__acoes {
   display: flex;
   gap: 0.5rem;
 }
 
-.ocorrencias__vazio {
+.relato__vazio {
   padding: 1rem;
   border: 2px dashed #b5c4cc;
   border-radius: 0.5rem;
@@ -167,7 +167,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .ocorrencias {
+  .relatos {
     grid-template-columns: repeat(2, 1fr);
   }
 
